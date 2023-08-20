@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap');
+
+*{
+    font-family: montserrat, sans-serif;
+}
+
+body{
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.full-site-height{
+    min-height: 100vh;
+}
+
+.px-6{
+    padding: 0 7rem;
+}
+
+
+
+
+.search-icon{
+    cursor: pointer;
+}
+
+input[type=search]{
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    transition: .5s ease;
+}
+
+.carousel-item{
+    height: calc(100vh - 56px);
+}
+
+.carousel-item img{
+    height: 100%;
+}
+
+.carousel-controls{
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    display: flex;
+}
+.carousel-control-prev-p, .carousel-control-next-p{
+    background: #fff;
+    padding: 1em;
+    border: 0;
+    display: flex;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+   
+   .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.bg-color-p{
+    background-color: #DCC1AB;
+}
+
+.btn-p{
+    padding: 10pt;
+    border-radius: 25px;
+}
+
+.hover-green:hover{
+    background-color: #1B5B31;
+}
+
+
+
+.card{
+    width: 20%;
+    margin: 0 5em;
+    display: flex;
+    align-items: flex-start;
+}
+
+.icon{
+    height: 3em;
+    width: 3em;
+    margin-bottom: 2em;
+}
+
+.card a{
+    text-decoration: none;
+    color: #1B5B31;
+    border-bottom: 1px solid #1B5B31;
+}
+
+
+
+.o-firmie{
+    background-color: #1B5B31;
+}
+
+.side-image{
+    height: 100vh;
+    max-width: 100%;
+}
+
+
+
+.realizacje{
+    background-color: #DCC1AB;
+    position: relative;
+    height: 150vh;
+    overflow-y: hidden;
+    transition: height 5s ease-in-out;
+}
+
+.realizacje::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, #DCC1AB 0%, transparent 100%);
+    z-index: 1;
+    transition: display 5s ease-in-out;
+}
+
+.gradient-hidden::before{
+    display: none!important;
+}
+
+.grid{
+    margin: 0 auto;
+}
+
+.grid-item{
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+.grid-item img{
+    width: 100%;
+    height: auto;
+}
+
+.check-out-gallery{
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-color: #000;
+    color: #000;
+    z-index: 2;
+}
+
+.check-out-gallery:hover{
+    border-color: black;
+    background-color: #000;
+    color: #fff;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.popup img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+.footer-container{
+    padding: 8rem;
+    padding-bottom: 0;
+}
+
+.background{
+    background-color: #1B5B31;
+    padding: 8rem 7rem;
+}
+
+.btn-w{
+    background: white;
+    color: #1B5B31;
+    transition: .3s ease;
+}
+
+.btn-w:hover{
+    background: #000;
+}
+
+hr{
+    height: 3px;
+    margin: 5rem 0;
+}
+
+.footer-links ul li{
+    list-style-type: none;
+    display: inline;
+    padding-right: 3rem;
+}
+
+.footer-links ul li a{
+    text-decoration: none;
+    color: #fff;
+    transition: .3s ease;
+}
+
+.footer-links ul li a:hover, .footer-links ul li a:active{
+    color: #1B5B31;
+}
+
+.text-2{
+    margin-top: 10rem;
+    margin-bottom: 1rem;
+}
+
+.bg-green{
+    background-color: #1B5B31;
+    border-color: #1B5B31;
+}
+
+
+.dropdown-menu{
+    display: none;
+    transition: .3s ease;
+}
