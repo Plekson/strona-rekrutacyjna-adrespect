@@ -321,6 +321,10 @@ hr{
         height: auto!important;
         max-height: 100vh;
     }
+
+    .my-carousel-item{
+        height: 50vh;
+    }
   }
 
   @media (max-width: 1200px){
