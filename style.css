@@ -44,26 +44,35 @@ input[type=search]{
     position: absolute;
 }
 
-.carousel-item{
+.my-active {
+    opacity: 1;
+}
+
+.my-carousel-item{
     height: calc(100vh - 56px);
+    min-width: 50%;
+    flex: 0 0 100%;
+    transition: opacity 0.5s ease-in-out;
 }
 
-.carousel-item img{
+.my-carousel-item img{
     height: 100%;
+    width: 100%;
 }
 
-.carousel-controls{
+.my-carousel-controls{
     position: absolute;
     z-index: 1;
     bottom: 0;
     right: 0;
     display: flex;
 }
-.carousel-control-prev-p, .carousel-control-next-p{
+.my-carousel-control-prev-p, .my-carousel-control-next-p{
     background: #fff;
     padding: 1em;
     border: 0;
     display: flex;
+    cursor: pointer;
 }
 
 .carousel-control-prev-icon {
@@ -72,6 +81,17 @@ input[type=search]{
    
    .carousel-control-next-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.my-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.my-carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .bg-color-p{
@@ -86,8 +106,6 @@ input[type=search]{
 .hover-green:hover{
     background-color: #1B5B31;
 }
-
-
 
 .card{
     width: 20%;
@@ -154,7 +172,7 @@ input[type=search]{
 }
 
 .grid-item{
-    max-width: 500px;
+    max-width: 400px;
     margin-bottom: 30px;
 }
 .grid-item img{
@@ -281,7 +299,7 @@ hr{
         align-items: center;
     }
 
-    .card p, .oferta h2{
+    .card p{
         text-align: center;
     }
 
@@ -298,6 +316,11 @@ hr{
     .br-none{
         display: none;
     }
+
+    .side-image{
+        height: auto!important;
+        max-height: 100vh;
+    }
   }
 
   @media (max-width: 1200px){
@@ -313,16 +336,53 @@ hr{
     .line-2{
         align-items: center;
     }
+
+    .carousel-item{
+        max-height: 100%;
+    }
   }
 
   @media (max-width: 1000px){
     .footer-links{
         width: 75%!important;
     }
+
+    .buttons-p{
+        text-align: center;
+    }
+
+    .background{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .no-padding{
+        padding: 0!important;
+    }
+
+    .center-margin{
+        margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 600px){
+    .buttons-p{
+        text-align: center;
+    }
+
+    .buttons-p button{
+        margin-right: 0!important;
+        margin-bottom: 2%!important;
+    }
   }
 
   @media (max-width: 500px){
     .footer-links{
         width: 100%!important;
+    }
+
+    .grid-item{
+        max-width: 300px;
     }
   }

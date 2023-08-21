@@ -8,6 +8,40 @@ const realizacje = document.getElementById('realizacje');
 const searchIcon = document.getElementById('search-icon');
 const searchPlace = document.getElementById('search-place');
 
+var currentSlide = 0;
+        var slides = document.querySelectorAll('.my-carousel-item');
+        var carouselSlide = document.querySelector('.my-carousel-slide');
+        var slideWidth = slides[0].clientWidth; // Assuming all slides have the same width
+
+        function showSlide(slideIndex) {
+            if (slideIndex < 0) {
+                currentSlide = slides.length - 1;
+            } else if (slideIndex >= slides.length) {
+                currentSlide = 0;
+            } else {
+                currentSlide = slideIndex;
+            }
+
+            var translateXValue = -currentSlide * slideWidth;
+            carouselSlide.style.transform = `translateX(${translateXValue}px)`;
+
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('my-active');
+            }
+            slides[currentSlide].classList.add('my-active');
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        // Show the initial slide
+        showSlide(currentSlide);
+
 let expanded = false;
 
   function toggleExpand() {
@@ -30,13 +64,17 @@ let expanded = false;
 
     expandButton.addEventListener('click', toggleExpand);
 
-var elem = document.querySelector('.grid');
-var msnry = new Masonry( elem, {
-    itemSelector: '.grid-item',
-    columnWidth: 500,
-    gutter: 30,
-    fitWidth: true
-});
+    document.onreadystatechange = () => {
+      if (document.readyState === 'complete') {
+        var elem = document.querySelector('.grid');
+        var msnry = new Masonry( elem, {
+          itemSelector: '.grid-item',
+          gutter: 30,
+          fitWidth: true
+        });
+      }
+    };
+
 
 
 var popup = document.getElementById('popup');
