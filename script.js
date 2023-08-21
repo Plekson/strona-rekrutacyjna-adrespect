@@ -12,14 +12,13 @@ let expanded = false;
 
   function toggleExpand() {
     if (expanded) {
-        realizationSection.style.height = '150vh';
+        realizationSection.style.maxHeight = '150vh';
         expandButton.innerHTML = 'Rozwiń <i class="fas fa-arrow-down"></i>';
         realizacje.classList.remove('gradient-hidden');
         expandButton.style.backgroundColor = 'transparent'
         expandButton.style.color = 'black'
     } else {
-        visibleItems = gridItems.length;
-        realizationSection.style.height = 'auto';
+        realizationSection.style.maxHeight = '100%';
         expandButton.innerHTML = 'Zwiń <i class="fas fa-arrow-up"></i>';
         expandButton.style.backgroundColor = 'black'
         expandButton.style.color = 'white'
@@ -76,9 +75,7 @@ var currentImageIndex = 0;
 
   let searchnumber = 0
   searchIcon.addEventListener('click', function(){
-    searchPlace.style.position = "relative"
-    searchPlace.style.opacity = "1";
-    searchPlace.style.zIndex = "1";
+    searchPlace.classList.toggle('show-search')
 
     searchnumber += 1
     if(searchnumber > 1){
@@ -90,20 +87,6 @@ var currentImageIndex = 0;
     console.log("nothing fancy there")
   }
 
-const dropdownToggle = document.querySelector('.dropdown-toggle');
-const dropdownMenu = document.querySelector('.dropdown-menu');
-
-let droppeddown = false
-
-  function dropdown(){
-    if(droppeddown){
-      dropdownMenu.style.display = 'none';
-    }else{
-      dropdownMenu.style.display = 'block';
-    }
-    droppeddown = !droppeddown;
-  }
-  dropdownToggle.addEventListener('click', dropdown);
 
 
 const navbarToggler = document.querySelector('.navbar-toggler-icon');
