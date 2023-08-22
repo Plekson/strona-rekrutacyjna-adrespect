@@ -154,30 +154,24 @@ let navbarToggled = false
 
 
 
-  // Select all sections with the "section" class
 const sections = document.querySelectorAll('.section');
 
-// Configuration for the Intersection Observer
 const options = {
   root: null,
   rootMargin: '0px',
-  threshold: 0.3 // Adjust this threshold as needed
+  threshold: 0.3
 };
 
-// Callback function for the Intersection Observer
 function handleIntersection(entries, observer) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      // When a section becomes visible in the viewport, add the "visible" class
       entry.target.classList.add('visible');
     }
   });
 }
 
-// Create the Intersection Observer instance
 const observer = new IntersectionObserver(handleIntersection, options);
 
-// Observe each section
 sections.forEach(section => {
   observer.observe(section);
 });
