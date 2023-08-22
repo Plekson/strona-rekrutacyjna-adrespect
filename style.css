@@ -304,14 +304,6 @@ hr{
     border-color: #1B5B31;
 }
 
-/*.dropdown-toggle:hover+.dropdown-menu{
-    display: block;
-}
-
-.dropdown-menu:hover{
-    display: block;
-}*/
-
 .dropdown-menu{
     display: none;
     transition: .3s ease;
@@ -322,9 +314,17 @@ hr{
     transition: opacity 0.5s ease-in-out;
   }
 
-  .section.visible >*{
+.section.visible >*{
     opacity: 1;
-  }
+}
+
+.my-carousel-item img, .grid-item img{
+    background-color: #E0C7B3;
+}
+
+.side-image{
+    background-color: #1d5c33;
+}
 
 
 
