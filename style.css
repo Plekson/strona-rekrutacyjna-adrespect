@@ -306,7 +306,6 @@ hr{
 
 .dropdown-menu{
     display: none;
-    transition: .3s ease;
 }
 
 .section >* {
