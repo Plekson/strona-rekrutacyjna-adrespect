@@ -170,6 +170,7 @@ input[type=search]{
     height: 50%;
     background: linear-gradient(to top, #DCC1AB 0%, transparent 100%);
     z-index: 1;
+    pointer-events: none;
 }
 
 .gradient-hidden::before{
@@ -187,6 +188,7 @@ input[type=search]{
 .grid-item img{
     width: 100%;
     height: auto;
+    cursor: pointer;
 }
 
 .check-out-gallery{

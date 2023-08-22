@@ -110,9 +110,13 @@ var currentImageIndex = 0;
       }
   });
 
-  searchIcon.addEventListener('click', function(){
-    searchPlace.classList.toggle('show-search')
-  });
+
+
+
+
+searchIcon.addEventListener('click', function(){
+  searchPlace.classList.toggle('show-search')
+});
 
 
 
