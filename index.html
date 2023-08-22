@@ -24,20 +24,19 @@
                         Oferta
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">Projekty</a></li>
+                            <li><a class="dropdown-item" href="#">Wizualizacje</a></li>
+                            <li><a class="dropdown-item" href="#">Realizacje</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active px-3" aria-current="page" href="#">O firmie</a>
+                        <a class="nav-link px-3" aria-current="page" href="#o-firmie">O firmie</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-3" href="#">Realizacje</a>
+                        <a class="nav-link px-3" href="#realizacje">Realizacje</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-3" href="#">Kontakt</a>
+                        <a class="nav-link px-3" href="#kontakt">Kontakt</a>
                     </li>
                 </ul>
                 <form class="d-flex px-3" role="search">
@@ -50,7 +49,7 @@
 
 
 
-    <div class="intro container-fluid text-center px-0 bg-color-p">
+    <div id="intro" class="intro container-fluid text-center px-0 bg-color-p">
         <div class="row mx-0">
             <div class="col align-items-center justify-content-center d-flex flex-column text-start">
                 <div style="padding: 0 5%;">
@@ -91,7 +90,7 @@
     </div>
 
 
-    <div class="oferta container-fluid full-site-height p-4">
+    <div id="oferta" class="section oferta container-fluid full-site-height p-4">
         <div class="row">
             <div class="col" style="padding: 5%;">
                 <div class="w-75 margin-auto">
@@ -119,7 +118,7 @@
                     <img src="icons/star.svg" alt="" class="icon">
                     <h3>Realizacje</h3>
                     <p>Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii...</p>
-                    <a href="#">Dowiedz się więcej <i class="fas fa-arrow-right"></i></a>
+                    <a href="#">Zobacz nasze realizacje <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -127,7 +126,7 @@
 
 
 
-    <div class="o-firmie container-fluid full-site-height">
+    <div id="o-firmie" class="section o-firmie container-fluid full-site-height">
         <div class="row">
             <div class="col p-0">
                 <img src="images/house.jpg" class="side-image">
@@ -145,7 +144,7 @@
 
 
 
-    <div class="realizacje container-fluid" id="realizacje">
+    <div id="realizacje" class="section realizacje container-fluid" id="realizacje">
         <h2 class="display-5" style="padding: 5%;">Nasze <i>projekty</i></h2>
 
         <div class="grid">
@@ -166,9 +165,9 @@
         </div>
         <div id="popup" class="popup">
             <span class="close-popup">&times;</span>
-            <button id="prev-button" class="nav-button prev-button">&lt;</button>
+            <button id="prev-button" class="nav-button prev-button"><img src="icons/arrow-left.svg" alt="" class="opacity-0"></button>
             <img id="popup-image" src="" alt="">
-            <button id="next-button" class="nav-button next-button">&gt;</button>
+            <button id="next-button" class="nav-button next-button"><img src="icons/arrow-right.svg" alt="" class="opacity-0"></button>
         </div>
         
         <button type="button" id="expand-button" class="btn btn-outline-light btn-p check-out-gallery">Rozwiń<i class="fas fa-arrow-down"></i></button>
@@ -176,7 +175,7 @@
 
 
 
-    <div class="instagram container-fluid d-flex justify-content-center">
+    <div id="kontakt" class="section instagram container-fluid d-flex justify-content-center">
         <div class="background d-flex m-5 text-white justify-content-between">
             <div class="d-flex flex-column justify-content-center">
                 <h2>Zostańmy w kontakcie!</h2>
@@ -191,7 +190,7 @@
 
 
 
-    <div class="card-footer bg-black d-flex justify-content-center align-items-center text-white">
+    <div class="section card-footer bg-black d-flex justify-content-center align-items-center text-white">
         <div class="container footer-container">
             <div class="text-1">
                 <div class="line-1 d-flex justify-content-between align-items-center"><a class="navbar-brand fs-4" href="#"><span class="fw-bold">giard</span>design</a>

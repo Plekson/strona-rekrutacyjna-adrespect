@@ -111,19 +111,9 @@ var currentImageIndex = 0;
       }
   });
 
-  let searchnumber = 0
   searchIcon.addEventListener('click', function(){
     searchPlace.classList.toggle('show-search')
-
-    searchnumber += 1
-    if(searchnumber > 1){
-      searchEngine()
-    }
   });
-
-  function searchEngine(){
-    console.log("nothing fancy there")
-  }
 
 
 
@@ -143,3 +133,51 @@ let navbarToggled = false
   }
 
   navbarToggler.addEventListener('click', navbarToggle);
+
+
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+  const dropdownMenu = document.querySelector('.dropdown-menu')
+
+  let dropdownToggled = false
+
+  function dropdown(){
+    if(dropdownToggled){
+      dropdownMenu.style.display = 'none';
+    }else{
+      dropdownMenu.style.display = 'block';
+    }
+
+    dropdownToggled = !dropdownToggled
+  }
+
+  dropdownToggle.addEventListener('click', dropdown);
+
+
+
+  // Select all sections with the "section" class
+const sections = document.querySelectorAll('.section');
+
+// Configuration for the Intersection Observer
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.3 // Adjust this threshold as needed
+};
+
+// Callback function for the Intersection Observer
+function handleIntersection(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // When a section becomes visible in the viewport, add the "visible" class
+      entry.target.classList.add('visible');
+    }
+  });
+}
+
+// Create the Intersection Observer instance
+const observer = new IntersectionObserver(handleIntersection, options);
+
+// Observe each section
+sections.forEach(section => {
+  observer.observe(section);
+});
