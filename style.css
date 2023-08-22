@@ -203,6 +203,7 @@ input[type=search]{
     border-color: black;
     background-color: #000;
     color: #fff;
+    transition: .3s ease-in-out;
 }
 
 .popup {
