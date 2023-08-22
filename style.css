@@ -338,7 +338,7 @@ hr{
     }
 
     .card p{
-        text-align: center;
+        text-align: left;
     }
 
     .margin-auto{
@@ -368,6 +368,9 @@ hr{
         min-height: 100%;
     }
 
+    .my-text{
+        width: 100%!important;
+    }
   }
 
   @media (max-width: 1200px){
@@ -421,6 +424,10 @@ hr{
     .buttons-p button{
         margin-right: 0!important;
         margin-bottom: 2%!important;
+    }
+
+    .fs-5{
+        font-size: 14pt!important;
     }
   }
 

@@ -11,7 +11,7 @@ const searchPlace = document.getElementById('search-place');
 var currentSlide = 0;
         var slides = document.querySelectorAll('.my-carousel-item');
         var carouselSlide = document.querySelector('.my-carousel-slide');
-        var slideWidth = slides[0].clientWidth; // Assuming all slides have the same width
+        var slideWidth = slides[0].clientWidth;
 
         function showSlide(slideIndex) {
             if (slideIndex < 0) {
@@ -39,7 +39,6 @@ var currentSlide = 0;
             showSlide(currentSlide + 1);
         }
 
-        // Show the initial slide
         showSlide(currentSlide);
 
 let expanded = false;
