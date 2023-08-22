@@ -110,8 +110,15 @@ var currentImageIndex = 0;
       }
   });
 
+  window.addEventListener('click', (event) => {
+    if (event.target === popup) {
+        closePopupFunction();
+    }
+  });
 
-
+  function closePopupFunction() {
+    popup.style.display = 'none';
+  }
 
 
 searchIcon.addEventListener('click', function(){
